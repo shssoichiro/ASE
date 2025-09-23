@@ -1,6 +1,6 @@
 ### Announcement
 
-ASE is updated to version 1.1.5 with support of Victoria 3 patch 1.9.8, but its further development [is suspended](https://forum.paradoxplaza.com/forum/threads/mod-anbeelds-stockpile-economy.1679214/#post-30756157). Any person or a group of people have my permission to do whatever they want with the mod, the only requirement is to mention that your work is based on it. Check this repository for the source code and modding tools used.
+**ASE is updated to version 1.1.5 with support of Victoria 3 patch 1.9.8, but its further development [is suspended](https://forum.paradoxplaza.com/forum/threads/mod-anbeelds-stockpile-economy.1679214/#post-30756157).** Any person or a group of people have my permission to do whatever they want with the mod, the only requirement is to mention that your work is based on it. Check this repository for the source code and modding tools used.
 
 ### Description
 
