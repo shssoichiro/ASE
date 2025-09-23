@@ -1,3 +1,7 @@
+### Announcement
+
+ASE is updated to version 1.1.5 with support of Victoria 3 patch 1.9.8, but its further development [is suspended](https://forum.paradoxplaza.com/forum/threads/mod-anbeelds-stockpile-economy.1679214/#post-30756157). Any person or a group of people have my permission to do whatever they want with the mod, the only requirement is to mention that your work is based on it. Check this repository for the source code and modding tools used.
+
 ### Description
 
 **Anbeeld's Stockpile Economy** aka **ASE** is a mod that aims to implement a general stockpile system in Victoria 3. The goal is to make it feel like a natural, useful and important part of the game that fits well into its market design. It has a friendly UI and helpful tooltips, can be used by both players and AI countries and is optimized to impact performance as little as possible.
@@ -9,8 +13,6 @@ The mod allows you to set **Price Targets** for all goods individually, and then
 **[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3249228964)**  
 **[Paradox Mods](https://mods.paradoxplaza.com/mods/81091/Any)**  
 **[Paradox Forum](https://forum.paradoxplaza.com/forum/threads/mod-anbeelds-stockpile-economy.1679214/)**
-
-[![Support my work!](https://i.imgur.com/Xp3sMoF.jpeg)](https://buymeacoffee.com/anbeeld)
 
 ### Compatibility
 
