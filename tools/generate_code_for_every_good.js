@@ -1834,41 +1834,120 @@ ase_check_trigger_for_all_market_goods += `
 }
 `;
 
-console.log("### PRODUCTION METHODS START ###");
-console.log(ase_production_methods_saving + ase_production_methods_spending);
-console.log("### PRODUCTION METHODS END ###");
-console.log("##########");
-console.log("### MODIFIER TYPES START ###");
-console.log(
-  ase_modifier_types_input_add +
+const fs = require("fs");
+const path = require("path");
+
+// Ensure directories exist
+const ensureDir = (filePath) => {
+  const dir = path.dirname(filePath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+};
+
+// Write production methods
+const productionMethodsPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "common",
+  "production_methods",
+  "ase_production_methods.txt"
+);
+ensureDir(productionMethodsPath);
+fs.writeFileSync(
+  productionMethodsPath,
+  "\uFEFF" + ase_production_methods_saving + ase_production_methods_spending
+);
+console.log("Production methods written to: " + productionMethodsPath);
+
+// Write modifier types
+const modifierTypesPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "common",
+  "modifier_type_definitions",
+  "ase_modifier_types.txt"
+);
+ensureDir(modifierTypesPath);
+fs.writeFileSync(
+  modifierTypesPath,
+  "\uFEFF" +
+    ase_modifier_types_input_add +
     ase_modifier_types_input_mult +
     ase_modifier_types_output_mult
 );
-console.log("### MODIFIER TYPES END ###");
-console.log("##########");
-console.log("### GENERATED MODIFIERS START ###");
-console.log(
-  ase_modifiers_input_mult_all_goods +
+console.log("Modifier types written to: " + modifierTypesPath);
+
+// Write generated modifiers
+const generatedModifiersPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "common",
+  "static_modifiers",
+  "ase_generated_modifiers.txt"
+);
+ensureDir(generatedModifiersPath);
+fs.writeFileSync(
+  generatedModifiersPath,
+  "\uFEFF" +
+    ase_modifiers_input_mult_all_goods +
     ase_modifiers_input_mult +
     ase_modifiers_output_mult_all_goods +
     ase_modifiers_output_mult
 );
-console.log("### GENERATED MODIFIERS END ###");
-console.log("##########");
-console.log("### GENERATED EFFECTS START ###");
-console.log(ase_perform_effect_for_every_market_goods);
-console.log("### GENERATED EFFECTS END ###");
-console.log("##########");
-console.log("### GENERATED TRIGGERS START ###");
-console.log(
-  ase_check_trigger_for_any_market_goods +
+console.log("Generated modifiers written to: " + generatedModifiersPath);
+
+// Write generated effects
+const generatedEffectsPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "common",
+  "scripted_effects",
+  "ase_generated_effects.txt"
+);
+ensureDir(generatedEffectsPath);
+fs.writeFileSync(
+  generatedEffectsPath,
+  "\uFEFF" + ase_perform_effect_for_every_market_goods
+);
+console.log("Generated effects written to: " + generatedEffectsPath);
+
+// Write generated triggers
+const generatedTriggersPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "common",
+  "scripted_triggers",
+  "ase_generated_triggers.txt"
+);
+ensureDir(generatedTriggersPath);
+fs.writeFileSync(
+  generatedTriggersPath,
+  "\uFEFF" +
+    ase_check_trigger_for_any_market_goods +
     ase_check_trigger_for_all_market_goods
 );
-console.log("### GENERATED TRIGGERS END ###");
-console.log("##########");
-console.log("### GENERATED VALUES START ###");
-console.log(
-  ase_stockpile_goods_priority_values +
+console.log("Generated triggers written to: " + generatedTriggersPath);
+
+// Write generated values
+const generatedValuesPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "common",
+  "script_values",
+  "ase_generated_values.txt"
+);
+ensureDir(generatedValuesPath);
+fs.writeFileSync(
+  generatedValuesPath,
+  "\uFEFF" +
+    ase_stockpile_goods_priority_values +
     "\n" +
     ase_stockpile_goods_reserve_max_factor_values +
     "\n" +
@@ -1883,12 +1962,33 @@ console.log(
     ase_scripted_trigger_values +
     ase_country_reserve_weeks_values
 );
-console.log("### GENERATED VALUES END ###");
-console.log("##########");
-console.log("### GENERATED GUIS START ###");
-console.log(ase_generated_scripted_guis);
-console.log("### GENERATED GUIS END ###");
-console.log("##########");
-console.log("### GENERATED LOCALIZATION START ###");
-console.log(ase_generated_localization);
-console.log("### GENERATED LOCALIZATION END ###");
+console.log("Generated values written to: " + generatedValuesPath);
+
+// Write generated GUIs
+const generatedGuisPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "common",
+  "scripted_guis",
+  "ase_generated_scripted_guis.txt"
+);
+ensureDir(generatedGuisPath);
+fs.writeFileSync(generatedGuisPath, "\uFEFF" + ase_generated_scripted_guis);
+console.log("Generated GUIs written to: " + generatedGuisPath);
+
+// Write generated localization
+const generatedLocalizationPath = path.join(
+  __dirname,
+  "..",
+  "src",
+  "localization",
+  "english",
+  "ase_generated_l_english.yml"
+);
+ensureDir(generatedLocalizationPath);
+fs.writeFileSync(
+  generatedLocalizationPath,
+  "\uFEFF" + ase_generated_localization
+);
+console.log("Generated localization written to: " + generatedLocalizationPath);
