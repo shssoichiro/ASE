@@ -8,9 +8,7 @@ The mod allows you to set **Price Targets** for all goods individually, and then
 
 TODO: Update links once published
 
-**[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3249228964)**  
-**[Paradox Mods](https://mods.paradoxplaza.com/mods/81091/Any)**  
-**[Paradox Forum](https://forum.paradoxplaza.com/forum/threads/mod-anbeelds-stockpile-economy.1679214/)**
+**[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3604047737)**
 
 ### Compatibility
 
