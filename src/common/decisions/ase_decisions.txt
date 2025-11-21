@@ -1,6 +1,7 @@
 ﻿ase_remove_everything_related_to_stockpiling = {
 	is_shown = {
 		is_player = yes
+		has_game_rule = ase_remove_stockpiling_decision_on
 	}
 	when_taken = {
 		trigger_event = {

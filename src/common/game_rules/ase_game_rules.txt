@@ -368,3 +368,12 @@ ase_restrictions_on_setting_price_targets = {
 	ase_restrictions_on_setting_price_targets_none = {
 	}
 }
+
+ase_remove_stockpiling_decision = {
+	default = ase_remove_stockpiling_decision_on
+	# When set to "Off", the decision to remove stockpiling will not be created
+	ase_remove_stockpiling_decision_on = {
+	}
+	ase_remove_stockpiling_decision_off = {
+	}
+}
